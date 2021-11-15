@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Prueba from '../components/prueba.tsx'
+import Prueba from '../components/prueba.js'
 
 export default function Home() {
   return (
