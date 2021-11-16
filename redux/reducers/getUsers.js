@@ -1,25 +1,19 @@
+import {INIT_ALL_USERS} from '../actions/getUsers'
+
 const initialState = {
-  list: [
-    {
-      id:1,
-      name: 'alex'
-    },
-    {
-      id:2,
-      name: 'ana'
-    },
-    {
-      id:3,
-      name: 'jhoan'
-    },
-    {
-      id:4,
-      name: 'milagros'
-    }
-  ]
+  list: []
+}
+
+export const getAllUsers = (state = initialState, action) => {
+  console.log(action)
+  switch (action.type) {
+    case INIT_ALL_USERS:
+      return action.payload
+    default:
+      return state;
+  }
 }
 
 
-export function getUsers(state = initialState, action) {
-  return state
-}
+
+

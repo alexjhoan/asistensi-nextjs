@@ -1,16 +1,17 @@
 import React, { Fragment, PureComponent } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-
+import Link from 'next/link'
 
 const navigation = [
-   { name: 'User', href: '#', current: false },
+   { name: 'Home', href: '/', current: false },
+   { name: 'User', href: 'users', current: false }
  ]
- 
+
  function classNames(...classes) {
    return classes.filter(Boolean).join(' ')
  }
- 
+
 export class Nav extends PureComponent {
    render() {
       return (
@@ -19,7 +20,7 @@ export class Nav extends PureComponent {
       {({ open }) => (
         <>
           <div className="container mx-auto px-6 md:px-36">
-            <div className="relative flex items-center justify-between h-16">              
+            <div className="relative flex items-center justify-between h-16">
               <div className="flex-1 flex items-center justify-between sm:items-stretch">
                 <div className="flex-shrink-0 flex items-center">
                   <img
@@ -36,17 +37,18 @@ export class Nav extends PureComponent {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-pink-700 bg-opacity-50 text-white' : 'text-white hover:bg-pink-700 hover:bg-opacity-50 hover:text-white',
-                          'px-5 py-1 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
+                      <Link href={item.href}>
+                        <a
+                          key={item.name}
+                          className={classNames(
+                            item.current ? 'bg-pink-700 bg-opacity-50 text-white' : 'text-white hover:bg-pink-700 hover:bg-opacity-50 hover:text-white',
+                            'px-5 py-1 rounded-md text-sm font-medium'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
