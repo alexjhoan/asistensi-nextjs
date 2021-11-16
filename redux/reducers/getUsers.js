@@ -5,10 +5,11 @@ const initialState = {
 }
 
 export const getAllUsers = (state = initialState, action) => {
-  console.log(action)
   switch (action.type) {
     case INIT_ALL_USERS:
-      return action.payload
+      return action.payload;
+    case 'REMOVE_USER':
+      return state.filter((post)=>post.id !== action.id);
     default:
       return state;
   }

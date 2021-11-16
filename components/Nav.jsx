@@ -4,8 +4,8 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 
 const navigation = [
-   { name: 'Home', href: '/', current: false },
-   { name: 'User', href: 'users', current: false }
+   { name: 'Home', href: '/', current: false, id: 1 },
+   { name: 'User', href: 'users', current: false, id: 2 }
  ]
 
  function classNames(...classes) {
@@ -37,9 +37,9 @@ export class Nav extends PureComponent {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <Link href={item.href}>
+                      <Link href={item.href} key={item.id}>
                         <a
-                          key={item.name}
+                          href={item.href}
                           className={classNames(
                             item.current ? 'bg-pink-700 bg-opacity-50 text-white' : 'text-white hover:bg-pink-700 hover:bg-opacity-50 hover:text-white',
                             'px-5 py-1 rounded-md text-sm font-medium'
