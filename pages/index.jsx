@@ -4,9 +4,7 @@ import Nav from '../components/Nav'
 import { SwiperSlide} from 'swiper/react'
 import Swiper from 'react-id-swiper'
 import Image from 'next/image'
-
-
-
+import Users from '../components/Users'
 
 export default function Home() {
   const paramsswiper = {
@@ -21,9 +19,10 @@ export default function Home() {
   return (
     <React.Fragment>
       <div className="relative overflow-hidden">
+        <Users />
         <Background/>
-        <Nav/> 
-        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:gap-x-52 md:px-36 "> 
+        <Nav/>
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:gap-x-52 md:px-36 ">
           <div className="sm:mt-20 2xl:mt-32">
             <h1 className="text-3xl md:text-5xl text-white font-extrabold leading-tight mb-6 md:mb-12 mt-0">Special Way <br/>To Realize Your Own <br/>Bussines.</h1>
             <p className="text-xl text-white ">Are you going to make ypur website? Share your idea with us or make it by yourself with our project maker software. Make it happens today!</p>
@@ -57,7 +56,7 @@ export default function Home() {
             </Swiper>
           </div>
         </div>
-      </div>        
+      </div>
     </React.Fragment>
   )
 }
