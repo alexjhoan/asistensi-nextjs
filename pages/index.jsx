@@ -20,9 +20,9 @@ export default function Home() {
       <div className="relative overflow-hidden">
         <Background/>
         <Nav/>
-        <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-52 lg:px-36 ">
+        <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16 2xl:gap-x-52 lg:px-20 2xl:px-36 ">
           <div className="sm:mt-20 2xl:mt-32">
-            <h1 className="text-3xl lg:text-5xl text-white font-extrabold leading-tight mb-6 lg:mb-12 mt-0">Special Way <br/>To Realize Your Own <br/>Bussines.</h1>
+            <h1 className="text-3xl lg:text-4xl 2xl:text-5xl text-white font-extrabold leading-tight mb-6 2xl:mb-12 mt-0">Special Way <br/>To Realize Your Own <br/>Bussines.</h1>
             <p className="text-xl text-white ">Are you going to make ypur website? Share your idea with us or make it by yourself with our project maker software. Make it happens today!</p>
             <div className="flex flex-col xl:flex-row mt-6 xl:mt-14 space-y-4 xl:space-x-8 xl:space-y-0">
               <button className="bg-blue-400 border-2 border-blue-400 border-opacity-100  text-white px-8 py-3 rounded-3xl transition-colors duration-500 ease-in-out hover:bg-transparent">Get it started</button>
