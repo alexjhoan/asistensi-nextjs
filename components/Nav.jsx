@@ -19,7 +19,7 @@ export class Nav extends PureComponent {
             <Disclosure as="nav">
       {({ open }) => (
         <>
-          <div className="container mx-auto px-6 md:px-36">
+          <div className="container mx-auto px-6 lg:px-20 2xl:px-36">
             <div className="relative flex items-center justify-between h-16">
               <div className="flex-1 flex items-center justify-between sm:items-stretch">
                 <div className="flex-shrink-0 flex items-center">
