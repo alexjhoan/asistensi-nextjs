@@ -35,5 +35,5 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ]
+, "components/prueba.jsx", "components/Nav.jsx", "components/Background.jsx", "pages/index.jsx", "pages/_app.js"  ]
 }
